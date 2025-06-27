@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                 String t = String.valueOf(new Date().getTime());
                 String sign = md5(t + tmp[1]);
 
-                Request request = new Request.Builder().url("http://" + tmp[0] + "/appHeart?t=" + t + "&sign=" + sign).method("GET", null).build();
+                Request request = new Request.Builder().url("https://" + tmp[0] + "/appHeart?t=" + t + "&sign=" + sign).method("GET", null).build();
                 Call call = Utils.getOkHttpClient().newCall(request);
                 call.enqueue(new Callback() {
                     @Override
@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
         String t = String.valueOf(new Date().getTime());
         String sign = md5(t + key);
 
-        Request request = new Request.Builder().url("http://" + host + "/appHeart?t=" + t + "&sign=" + sign).method("GET", null).build();
+        Request request = new Request.Builder().url("https://" + host + "/appHeart?t=" + t + "&sign=" + sign).method("GET", null).build();
         Call call = Utils.getOkHttpClient().newCall(request);
         call.enqueue(new Callback() {
             @Override
@@ -335,7 +335,7 @@ public class MainActivity extends AppCompatActivity {
             String t = String.valueOf(new Date().getTime());
             String sign = md5(t + tmp[1]);
 
-            Request request = new Request.Builder().url("http://" + tmp[0] + "/appHeart?t=" + t + "&sign=" + sign).method("GET", null).build();
+            Request request = new Request.Builder().url("https://" + tmp[0] + "/appHeart?t=" + t + "&sign=" + sign).method("GET", null).build();
             Call call = Utils.getOkHttpClient().newCall(request);
             call.enqueue(new Callback() {
                 @Override
